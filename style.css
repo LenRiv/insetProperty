@@ -1,0 +1,91 @@
+/* Reseteo de estilos para todo el HTML y elimina los que tiene predeterminados 
+del navegador*/
+
+* {
+  box-sizing: border-box;/* Mantiene constante ancho y padding de un elemento */
+  margin: 0;/* Quita los espacios entre los elementos */
+  padding: 0;/* Elimina el espacio entre el contenido y el borde del elemento */
+}
+
+/* Color de fondo */
+body {
+  background-color: #f2eee2;
+}
+
+/* Caja flexible y centrada */
+div {
+  display: flex;/* Modelo de caja flexible */
+  align-items: center;/* Ayuda a centrar los elementos dentro del div */
+  justify-content: center;
+  height: 50vh;/* Establece la altura del elemento en la ventana del navegador y lo hace al 50% de la ventana del dispositivo. */
+}
+
+/* Si se quiere lograr una alineación mas precisa,
+se recomienda utilizar  con justify-content y text-align. */
+
+/* Fuente, tamaño, color y margen del titulo */
+.title {
+  font-family: monospace;
+  position: relative;
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  color: #272622;
+}
+
+/* Estilos para el texto interior del circulo */
+p {
+  font-family: monospace;
+  font-size: 2rem;
+  color: #272622;
+  text-align: center;
+  margin: 0 auto; 
+}
+
+
+/* Tamaño, posicion y color del circulo */
+.circle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ffc300;
+  /* top: 0;
+  bottom: 0;  
+  right: 0;
+  left: 0; */
+  margin: auto;
+  inset: 0 0 0 0;  
+/* inset es una forma mas abraviada de nombrar "top","bottom" "right","left" */
+  
+}
+
+/* Establece la animación para el círculo y el tiempo de duracion */
+@keyframes beatCircle {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.2);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circle {
+  animation: beatCircle 1s linear infinite;
+}
